@@ -9,10 +9,12 @@ use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class AuthController extends Controller
 {
+    use RefreshDatabase;
     public function register(Request $request)
     {
         try {
